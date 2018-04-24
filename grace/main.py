@@ -16,7 +16,7 @@ class criarcenas():
                                                                           height = 200,
                                                                           width = 60, 
                                                                           top = 100))
-       self.pergaminho =Elemento(img=pergaminho, = dict ( left = 90,height = 200, width = 60,    top = 100))
+       ##self.pergaminho = Elemento(img=pergaminho, = dict ( left = 90,height = 200, width = 60,    top = 100))
                                                                                       
                                                                                         
                                                                                          
@@ -26,6 +26,8 @@ class criarcenas():
       self.habbo.entra(self.ilha)
       self.pergaminho.entra(self.ilha)
       self.pergaminho.vai = self.intrucao.vai
+      
+      self.ilha.vai()
    
    if __name__ == "__main__":
    
