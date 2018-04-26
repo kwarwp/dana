@@ -34,10 +34,13 @@ class Agua():
       self.florestaSeiva.esquerda = self.florestaCacto
       self.florestaCacto.direita = self.florestaSeiva
      
-      self.minicoqueiro= Elemento(img=coqueiro, style=dict (left=100, top=1000, height=200,width=200,bottom=200))
-      self.miniorvalho= Elemento (img=orvalho, style=dict (left=200, top= 500, height=200, width=200, bottom=200))
-      self.miniseiva= Elemento (img=seiva, style=dict (left=500, top= 300, height=200, width=200, bottom=200))
-      self.minicacto= Elemento (img=cacto, style=dict (left=300, top= 2500, height=200, width=200, bottom=200))
+      self.minicoqueiro= Elemento(img=coqueiro, style=dict (left=150, top=300, height=300,width=200,bottom=200))
+      self.miniorvalho= Elemento (img=orvalho, style=dict (left=200, top= 500, height=300, width=200, bottom=200))
+      self.miniseiva= Elemento (img=seiva, style=dict (left=500, top= 300, height=50, width=200, bottom=200))
+      self.minicacto= Elemento (img=cacto, style=dict (left=300, top= 500, height=200, width=200, bottom=200))
+      
+      self.floresta.meio = self.floresta
+      self.floresta.vai
      
       self.minicoqueiro.entra (self.florestaCoqueiro)
       self.minicacto.entra (self.florestaCacto)
@@ -49,7 +52,7 @@ class Agua():
       self.minicoqueiro.vai = self.cenaCoqueiro.vai
       self.cenaCoqueiro.esquerda = self.florestaCoqueiro
       self.cenaCoqueiro.direita = self.florestaCoqueiro
-           
+      
       self.cenaCacto = Cena (img= cacto)
       self.minicacto.vai = self.cenaCacto.vai
       self.cenaCacto.esquerda = self.florestaCacto
@@ -64,8 +67,8 @@ class Agua():
       self.miniseiva.vai = self.cenaSeiva.vai
       self.cenaSeiva.esquerda = self.florestaSeiva
       self.cenaSeiva.direita = self.florestaSeiva
-    
-     
+      
+      
     
       self.floresta.vai ()
 if __name__ == "__main__":
