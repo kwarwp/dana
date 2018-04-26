@@ -12,29 +12,30 @@ cacto = "http://clipart.coolclips.com/480/vectors/tf05089/CoolClips_natu0731.png
 
 class Agua():
      def __init__ (self):
+      
       self.floresta= Cena(img=floresta)
       self.floresta0= Cena(img=floresta, direita= self.floresta)
       self.floresta1= Cena(img=floresta, esquerda=self.floresta)
       self.floresta2= Cena(img=floresta, direita=self.floresta)
       self.floresta3= Cena(img=floresta, esquerda=self.floresta)
       self.floresta4= Cena(img=floresta, direita=self.floresta)
+      
       self.coqueiro= Elemento(img=coqueiro, style=dict (left=100, top= 300, height=200 ,width=200,bottom=100))
       self.aguadecoco= Elemento (img=aguadecoco, style=dict (left=90, top=100 , height=100, width=100, bottom=10))
       self.orvalho= Elemento (img=orvalho, style=dict (left=95, top= 100, height=100, width=100, bottom=15))
       self.seivadearvore= Elemento (img=seivadearvore, style=dict (left=100, top= 100, height=100, width=100, bottom=15))
       self.cacto= Elemento (img=cacto, style=dict (left=95, top= 100, height=100, width=100, bottom=15))
      
-      self.floresta.direita= (self.floresta0)
-      self.coqueiro.entra(self.floresta0)
-      self.aguadecoco.entra (self.coqueiro.entra)
-      self.floresta.esquerda= (self.floresta2)
+      self.floresta.direita = self.floresta1
+      self.coqueiro.entra(self.floresta1)
+      #criar a funÃ§Ã£o de abrir elemento ao clicar em elemento
+      self.floresta.esquerda = self.floresta2
       self.orvalho.entra(self.floresta2)
-      self.floresta.direita.baixo= (self.floresta3)
+      self.floresta.meio = self.floresta0
+      self.floresta0.direita= (self.floresta3)
       self.cacto.entra = (self.floresta3)
-      self.floresta.esquerda.baixo = (self.floresta4)
+      self.floresta.esquerda= (self.floresta4)
       self.seivadearvore.entra (self.floresta4)
-      self.floresta= Cena (img=floresta)
-      
         
      
       
