@@ -6,18 +6,18 @@ floresta_homogenea = "/home/todomundo/Desktop/Forest-pine-trees-sun-rays_1920x12
 pergaminho = "https://i.pinimg.com/originals/df/6c/76/df6c765f7019656350531c4a4eff5e11.png"
 habbo = "https://wydnblog.files.wordpress.com/2010/08/miss.png"
  
-class criarcenas():
-   def __init__(self):
+class Criarcenas():
+    def __init__(self):
 
-       self.ilha = Cena(img=ilha)
-       self.habbo = Elemento(img=habbo, style=dict, left=100, right=100, top=100, bottom=100)
-       self.habbo.entra(self.ilha)
-       def escreve (x):
-          self.escreve=input("usando string")
-          self.habbo.escreve()
-       self.ilha.vai()
+        self.ilha = Cena(img=ilha)
+        self.habbo = Elemento(img=habbo, style=dict(left=100, right=100, top=100, bottom=100))
+        self.habbo.entra(self.ilha)
+        def escreve (x):
+            self.escreve=input("usando string")
+            self.habbo.escreve()
+        self.ilha.vai()
 
-if __name__=="__main__":
-   criarcenas()
+if __name__ == "__main__":
+    Criarcenas()
 
 
