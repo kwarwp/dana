@@ -9,6 +9,10 @@ coqueiro = "https://2.bp.blogspot.com/-QutwWEONdV0/WSA8KeAeToI/AAAAAAAAJJM/2vz0m
 orvalho = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_3_HMMVXDWcMI9dIi_BI6i3F5jV-_983RseAwJ-DpEO2RoSP"
 seiva = "http://cdn.ciclovivo.com.br/wp-content/uploads/2015/009/img/noticias/1238633982_9f95150143%20(1).jpg"
 cacto = "https://www.guiamuriae.com.br/wp-content/uploads/2016/01/Agua-de-cacto-Foto-Pixabay.jpg"
+corda = "https://4.bp.blogspot.com/-VuqgmerQZ_8/VeX2DWsMdoI/AAAAAAAAeZU/oak3CEhkAcs/s1600/N%25C3%25A1utico%2B-%2Bcorda.png"
+faca = "http://pt-br.friday-the-13th-br.wikia.com/wiki/Arquivo:Fac%C3%A3o.png"
+pote = "http://rodrigorepresentacoes.com.br/imagens/produtos/902/Pote%20PP-10001.png"
+pano = "https://cdn.pixabay.com/photo/2016/08/15/07/39/towel-1594653_960_720.png"
 
 class Agua():
      def __init__ (self):
@@ -47,7 +51,7 @@ class Agua():
       self.miniseiva.entra (self.florestaSeiva)
       self.miniorvalho.entra (self.florestaOrvalho)
      
-      #criar a funÃ§Ã£o de abrir elemento ao clicar em elemento
+      #criar a funÃÂ§ÃÂ£o de abrir elemento ao clicar em elemento
       self.cenaCoqueiro = Cena (img=coqueiro)
       self.minicoqueiro.vai = self.cenaCoqueiro.vai
       self.cenaCoqueiro.esquerda = self.florestaCoqueiro
@@ -68,6 +72,8 @@ class Agua():
       self.cenaSeiva.esquerda = self.florestaSeiva
       self.cenaSeiva.direita = self.florestaSeiva
       
+      self.corda = Elemento (img=corda, tit="corda", style=dict (left=150, top=300, height=300,width=200,bottom=200))
+      inv.bota (self.corda)
       
     
       self.floresta.vai ()
