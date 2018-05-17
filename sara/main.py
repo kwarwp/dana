@@ -16,6 +16,7 @@ pano = "https://cdn.pixabay.com/photo/2016/08/15/07/39/towel-1594653_960_720.png
 
 class Agua():
      def __init__ (self):
+      inv.inicia()
      
       self.floresta= Cena(img=floresta)
       self.florestaOrvalho= Cena(img=floresta)
@@ -74,6 +75,8 @@ class Agua():
       
       self.corda = Elemento (img=corda, tit="corda", style=dict (left=150, top=300, height=300,width=200,bottom=200))
       inv.bota (self.corda)
+      self.faca = Elemento (img=faca, tit="faca", style=dict (left=150, top=300, height=300,width=200,bottom=200))
+      inv.bota (self.faca)
       
     
       self.floresta.vai ()
