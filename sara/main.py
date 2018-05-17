@@ -84,6 +84,8 @@ class Agua():
       inv.bota (self.pano)
       self.colher = Elemento (img=colher, tit="colher", style=dict (left=150, top=300, height=300,width=200,bottom=200))
       inv.bota (self.colher)
+      
+      
     
       self.floresta.vai ()
 if __name__ == "__main__":
