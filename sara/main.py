@@ -10,9 +10,9 @@ orvalho = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_3_HMMVXDWcMI
 seiva = "http://cdn.ciclovivo.com.br/wp-content/uploads/2015/009/img/noticias/1238633982_9f95150143%20(1).jpg"
 cacto = "https://www.guiamuriae.com.br/wp-content/uploads/2016/01/Agua-de-cacto-Foto-Pixabay.jpg"
 corda = "https://4.bp.blogspot.com/-VuqgmerQZ_8/VeX2DWsMdoI/AAAAAAAAeZU/oak3CEhkAcs/s1600/N%25C3%25A1utico%2B-%2Bcorda.png"
-faca = "http://pt-br.friday-the-13th-br.wikia.com/wiki/Arquivo:Fac%C3%A3o.png"
+faca = "https://vignette.wikia.nocookie.net/left4dead/images/0/0c/Machete.png/revision/latest?cb=20101021031134"
 pote = "http://rodrigorepresentacoes.com.br/imagens/produtos/902/Pote%20PP-10001.png"
-pano = "https://cdn.pixabay.com/photo/2016/08/15/07/39/towel-1594653_960_720.png"
+pano = "http://www.stickpng.com/assets/images/5856ad664f6ae202fedf277c.png"
 
 class Agua():
      def __init__ (self):
@@ -77,7 +77,10 @@ class Agua():
       inv.bota (self.corda)
       self.faca = Elemento (img=faca, tit="faca", style=dict (left=150, top=300, height=300,width=200,bottom=200))
       inv.bota (self.faca)
-      
+      self.pote = Elemento (img=pote, tit="pote", style=dict (left=150, top=300, height=300,width=200,bottom=200))
+      inv.bota (self.pote)
+      self.pano = Elemento (img=pano, tit="pano", style=dict (left=150, top=300, height=300,width=200,bottom=200))
+      inv.bota (self.pano)
     
       self.floresta.vai ()
 if __name__ == "__main__":
