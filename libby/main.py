@@ -20,7 +20,8 @@ class Foto:
     SPGP="https://imgur.com/WIJiQ0A.png"
     SPGU="https://imgur.com/KoLkTix.png"
     SPGC="https://imgur.com/7ezi6zF.png"
-    SGVI="https://youtu.be/LsRdPQ8Stq8"
+    SGVI="https://www.youtube.com/embed/LsRdPQ8Stq8"
+    SGVE='<iframe width="560" height="315" src="https://www.youtube.com/embed/LsRdPQ8Stq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     
 class Codigo(Code):
     def __init__(self, codigo="", topo="", cena=INVENTARIO, img="", vai=None, style=NS):
@@ -47,10 +48,22 @@ class Video(Elemento):
     def _close(self, *_):
         self.elt.style = {"visibility": "hidden", "opacity": 0}
         self.cena._video_=self
+
+class Embed(Elemento):
+    def __init__(self,source, width, height, top, left):
+        Elemento.__init__(self,style=dict(position="absolute", top=top,left=left))
+        video=html.IFRAME(src=source, width=width, height=height, frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+        video.onclick = self._close
+        self.elt<=video
+
+    def _close(self, *_):
+        self.elt.style = {"visibility": "hidden", "opacity": 0}
+        self.cena._video_=self
     
 c = Cena(Foto.SPG)
 e = Elemento(Foto.MIL0, style=dict(left=100, top=100, width="100px", height="120px"))
 e.entra(c)
-v = Video(SGVI, 600, 400, 100, 100)
+v = Embed(SGVI, 600, 400, 100, 100)
 v.entra(c)
 c.vai()
