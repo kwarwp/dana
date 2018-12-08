@@ -1,5 +1,6 @@
 # dana.libby.main.py
 from _spy.vitollino.main import Cena, Elemento, STYLE, Codigo as Code, INVENTARIO, NS
+from browser import html
 STYLE["width"] = 800
 class Foto:
     SPG= "https://imgur.com/TPGqQ7k.png"
@@ -52,7 +53,7 @@ class Video(Elemento):
 class Embed(Elemento):
     def __init__(self,source, width, height, top, left):
         Elemento.__init__(self,style=dict(position="absolute", top=top,left=left))
-        video=html.IFRAME(src=source, width=width, height=height, frameborder="0"
+        video=html.IFRAME(src=source, width=width, height=height, frameborder="0",
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
         video.onclick = self._close
         self.elt<=video
@@ -64,6 +65,6 @@ class Embed(Elemento):
 c = Cena(Foto.SPG)
 e = Elemento(Foto.MIL0, style=dict(left=100, top=100, width="100px", height="120px"))
 e.entra(c)
-v = Embed(SGVI, 600, 400, 100, 100)
+v = Embed(Foto.SGVI, 600, 400, 100, 100)
 v.entra(c)
 c.vai()
