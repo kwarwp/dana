@@ -118,3 +118,10 @@ NameError: name 'SGVI' is not defined
     v = Video(SGVI, 600, 400, 100, 100)
 NameError: name 'SGVI' is not defined
 '''},
+{'date': 'Sat Dec 08 2018 11:04:53.841 GMt-0200 (Horário de Verão de Brasília) -X- SuPyGirls -X-',
+'error': '''
+ module <string> line 55
+  video=html.IFRAME(src=source, width=width, height=height, frameborder="0"
+                                                                                     ^
+SyntaxError: invalid syntax
+'''},
