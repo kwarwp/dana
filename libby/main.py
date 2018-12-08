@@ -51,6 +51,6 @@ class Video(Elemento):
 c = Cena(Foto.SPG)
 e = Elemento(Foto.MIL0, style=dict(left=100, top=100, width="100px", height="120px"))
 e.entra(c)
-c.vai()
 v = Video(SGVI, 600, 400, 100, 100)
 v.entra(c)
+c.vai()
