@@ -5,7 +5,7 @@ MELIODAS="https://p7.hiclipart.com/preview/300/561/296/the-seven-deadly-sins-mel
 CIDADE="estadodedireito.com.br/wp-content/uploads/2016/04/Cidade.png"
 class naruto():
     meliodas= Elemento(img=MELIODAS)
-    cidade= cena(img=CIDADE)
+    cidade= Cena(img=CIDADE)
     meliodas.entra(cidade)
     cidade.vai
 naruto()
